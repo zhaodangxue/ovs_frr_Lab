@@ -1,3 +1,4 @@
+#!/bin/bash
 # 创建 QoS 策略并获取其 ID
 qos_id=$(sudo ovs-vsctl -- --id=@qos create qos type=linux-htb other-config:max-rate=600000000 queues=0=@q0 -- --id=@q0 create queue other-config:min-rate=600000000 other-config:max-rate=600000000 |& grep -o '[0-9a-f-]\+' | head -n 1)
 

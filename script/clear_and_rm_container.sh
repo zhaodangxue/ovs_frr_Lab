@@ -1,3 +1,4 @@
+#!/bin/bash
 for i in {1..6}
 do
   docker stop frr-0$i

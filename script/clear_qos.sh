@@ -1,3 +1,4 @@
+#!/bin/bash
 ports=$(sudo ovs-vsctl list port | grep name | awk -F '"' '{print $2}')
 
 for port in $ports; do

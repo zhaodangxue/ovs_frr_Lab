@@ -1,3 +1,4 @@
+#!/bin/bash
 # Containers array
 containers=("frr-01" "frr-02" "frr-03" "frr-04" "frr-05" "frr-06")
 

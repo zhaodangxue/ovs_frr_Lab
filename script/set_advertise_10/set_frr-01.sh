@@ -1,3 +1,4 @@
+#!/bin/bash
 container="frr-01"
 
 # Here are the commands to execute sequentially with advertisement-interval 10

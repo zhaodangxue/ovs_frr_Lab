@@ -1,3 +1,4 @@
+#!/bin/bash
 # 首先创建对应的h1容器
 docker run -d --privileged --name h4 quay.io/frrouting/frr:10.0.0
 REPO_FILE="/etc/apk/repositories"

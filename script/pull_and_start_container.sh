@@ -1,3 +1,4 @@
+#!/bin/bash
 # Pull the Docker image
 docker pull quay.io/frrouting/frr:10.0.0
 

@@ -1,3 +1,4 @@
+#!/bin/bash
 # 清除所有 QoS 策略
 sudo ovs-vsctl --all destroy qos
 

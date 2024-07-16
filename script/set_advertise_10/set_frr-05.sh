@@ -1,3 +1,4 @@
+#!/bin/bash
 # Define container name
 container="frr-05"
 
