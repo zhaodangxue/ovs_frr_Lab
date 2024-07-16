@@ -21,3 +21,6 @@ apt install openvswitch-switch
 * **ovs_br0_config.sh**:为对应的br0作相关配置，即用ovs-docker指令来增加相关port。
 * **delete_ovs_br.sh**:删除对应port后再删除网桥，并且进行验证。
 * **set_advertise_X目录**:这个目录下的脚本会为对应的容器进行对应的frr配置，唯一变量是advertisement Interval，这里的变量就是我们的X
+* **set_host目录**:这个目录负责创建四个host节点挂载到4个leaf节点上，也负责对应的节点删除
+* **setup.py**:这个负责安装对应的网络拓扑，包括spine，leaf，host节点和对应网桥的设置。
+* **teardown.py**:这个负责销毁之前setup设置的环境，销毁创建的br0网桥和所有节点相关的容器。
