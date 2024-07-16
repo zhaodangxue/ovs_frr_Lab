@@ -5,7 +5,7 @@ containers=("frr-01" "frr-02" "frr-03" "frr-04" "frr-05" "frr-06")
 for container in "${containers[@]}"
 do
   echo "Updating configuration in container: $container"
-  docker exec $container sed -i 's/bgpd=no/bgpd=yes/g' /etc/frr/daemon
+  docker exec $container sed -i 's/bgpd=no/bgpd=yes/g' /etc/frr/daemons
   docker exec $container /etc/init.d/frr restart
 done
 
