@@ -25,3 +25,13 @@ for container in "${containers[@]}"; do
 done
 
 echo "Network configuration completed successfully."
+# 加入新的网关
+docker exec -i h1 route add default gw 10.1.1.10
+# 设置网关
+docker exec -i h2 route add default gw 10.2.2.20
+# 设置网关
+docker exec -i h3 route add default gw 10.3.3.30
+# 加入新的网关
+docker exec -i h4 route add default gw 10.4.4.40
+
+echo "Gateway configuration completed successfully."

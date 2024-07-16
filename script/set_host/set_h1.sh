@@ -29,5 +29,3 @@ docker exec -i h1 ip route del default via $GATEWAY
 
 # 输出删除的网关信息
 echo "默认网关 $GATEWAY 已被删除。"
-# 加入新的网关
-docker exec -i h1 route add default gw 10.1.1.10
