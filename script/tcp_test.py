@@ -1,6 +1,7 @@
 import os
 import argparse
 import subprocess
+import time
 import termcolor as T
 def log(s, col="green"):
     print (T.colored(s, col))
@@ -15,6 +16,7 @@ def main():
     # 执行命令
     command = "docker exec -i h1 iperf -c 10.4.4.100"
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
+    time.sleep(11)
     information = "Bandwidth: %dMbps\n"%args.bw
     # 检查命令是否成功执行
     if result.returncode == 0:
