@@ -25,8 +25,8 @@ apt install openvswitch-switch
 * **setup.py**:这个负责安装对应的网络拓扑，包括spine，leaf，host节点和对应网桥的设置。
 * **teardown.py**:这个负责销毁之前setup设置的环境，销毁创建的br0网桥和所有节点相关的容器。
 * **reconnect_test.py**:重联收敛测试，根据不同的advertise interval来看重联收敛的变化。
-* **tcp_test.py**:tcp打流测试，输入**-b**链路带宽参数来对不同链路带宽进行测试。
-* **udp_test.py**:udp打流测试，输入**-B**链路带宽参数**-b**的iperf发包速率来进行对应打流测试。
+* **tcp_test.py**:tcp打流测试，输入-b链路带宽参数来对不同链路带宽进行测试。
+* **udp_test.py**:udp打流测试，输入-B链路带宽参数-b的iperf发包速率来进行对应打流测试。
 * **tcp_send_self.py**:tcp不限制链路带宽发包给h1本身和本身的deviceIP，测试最大性能。
 * **udp_send_self.py**:udp发包给h1本身和本身的deviceIP，限制iperf的发包速率，测试性能。
 * **test_all.py**:以上多个测试的聚合形态，打包了reconnect_test，tcp_test，udp_test，tcp_send_self，udp_send_self这些测试。
