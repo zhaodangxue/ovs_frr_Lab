@@ -19,7 +19,7 @@ def main():
     command = "docker exec -i h1 iperf -u -c 10.4.4.100 -b %dM -t 10"%args.bw
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     time.sleep(11)
-    information = "Bandwidth: %dMbps\n"%args.bw
+    information = "Link Bandwidth: %dMbps   Iperf Bandwidth: %dMbps\n"%(args.BW,args.bw)
     # 检查命令是否成功执行
     if result.returncode == 0:
        # 打印命令输出

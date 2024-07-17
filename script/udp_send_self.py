@@ -6,7 +6,7 @@ import termcolor as T
 def log(s, col="green"):
     print (T.colored(s, col))
 def main():
-    filename = "data/udp_arguement_test.txt"
+    filename = "data/udp_self_test.txt"
     parser = argparse.ArgumentParser(description="udp test")
     log("UDP test---")
     parser.add_argument('--BW', '-B',type=int, help='Bandwidth of the links in Mbps', default=1000)
