@@ -31,6 +31,7 @@ def main():
     os.system("./set_h4.sh")
     os.system("./set_br0.sh")
     os.chdir("..")
+    os.mkdir("data")
     log("Complete hosts!")
 if __name__ == "__main__":
     main()
