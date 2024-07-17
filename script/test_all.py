@@ -7,7 +7,8 @@ def log(s, col="green"):
     print (T.colored(s, col))
 def main():
     python3 = "python3 "
-    os.mkdir("/home/ovs_data")
+    if not os.path.exists("/home/ovs_data"):
+      os.mkdir("/home/ovs_data")
     log("Testing Reconnect Test---")
     # advertise time = 5
     os.system(python3+"setup.py -a 5")
