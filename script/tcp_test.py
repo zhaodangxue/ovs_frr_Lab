@@ -30,3 +30,5 @@ def main():
       # 打印错误信息
        print("Error executing command:")
        print(result.stderr)
+if __name__ == "__main__":
+     main()
