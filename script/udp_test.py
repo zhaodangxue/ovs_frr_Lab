@@ -6,16 +6,17 @@ import termcolor as T
 def log(s, col="green"):
     print (T.colored(s, col))
 def main():
-    filename = "data/tcp_arguement_test.txt"
-    parser = argparse.ArgumentParser(description="tcp test")
-    log("TCP test---")
-    parser.add_argument('--bw', '-b',type=int, help='Bandwidth of the links in Mbps', default=1000)
+    filename = "data/udp_arguement_test.txt"
+    parser = argparse.ArgumentParser(description="udp test")
+    log("UDP test---")
+    parser.add_argument('--BW', '-B',type=int, help='Bandwidth of the links in Mbps', default=1000)
+    parser.add_argument('--bw', '-b',type=int, help='Bandwidth of the iperf', default=1000)
     args = parser.parse_args()
     os.system("./clear_qos.sh")
-    os.system("./set_qos_%dM.sh"% args.bw)
-    os.system("docker exec -i h4 iperf -s &")
+    os.system("./set_qos_%dM.sh"% args.BW)
+    os.system("docker exec -i h4 iperf -u -s &")
     # 执行命令
-    command = "docker exec -i h1 iperf -c 10.4.4.100"
+    command = "docker exec -i h1 iperf -u -c 10.4.4.100 -b %dM -t 10"%args.bw
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     time.sleep(11)
     information = "Bandwidth: %dMbps\n"%args.bw
