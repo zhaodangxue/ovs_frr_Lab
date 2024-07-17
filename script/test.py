@@ -28,5 +28,25 @@ def main():
     route_count = count_routes(container_name)
     if route_count is not None:
         log(f"Route count for {container_name}: {route_count}")
+    container_name = "frr-02"
+    route_count = count_routes(container_name)
+    if route_count is not None:
+        log(f"Route count for {container_name}: {route_count}")
+    container_name = "frr-03"
+    route_count = count_routes(container_name)
+    if route_count is not None:
+        log(f"Route count for {container_name}: {route_count}")
+    container_name = "frr-04"
+    route_count = count_routes(container_name)
+    if route_count is not None:
+        log(f"Route count for {container_name}: {route_count}")
+    container_name = "frr-05"
+    route_count = count_routes(container_name)
+    if route_count is not None:
+        log(f"Route count for {container_name}: {route_count}")
+    container_name = "frr-06"
+    route_count = count_routes(container_name)
+    if route_count is not None:
+        log(f"Route count for {container_name}: {route_count}")
 if __name__ == "__main__":
     main()
