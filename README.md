@@ -8,6 +8,7 @@ An experiment with the same network topology as MininetLab but implemented using
 apt install docker.io
 apt install openvswitch-switch
 ```
+本实验所构建的网络拓扑图与https://github.com/zhaodangxue/mininetLab/blob/main/%E5%AE%9E%E9%AA%8C%E4%BB%8B%E7%BB%8D.pdf 中的spine-leaf框架网络拓扑图一致。
 
 这个Lab的script下的脚本目录介绍：
 
