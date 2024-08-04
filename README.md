@@ -30,3 +30,5 @@ apt install openvswitch-switch
 * **tcp_send_self.py**:tcp不限制链路带宽发包给h1本身和本身的deviceIP，测试最大性能。
 * **udp_send_self.py**:udp发包给h1本身和本身的deviceIP，限制iperf的发包速率，测试性能。
 * **test_all.py**:以上多个测试的聚合形态，打包了reconnect_test，tcp_test，udp_test，tcp_send_self，udp_send_self这些测试。
+
+执行测试的方法非常简单，执行**setup.py**后再执行**test_all.py**即可，最后清除实验环境时执行**teardown.py**，如果只想要执行某个特定的测试，举例:如果要执行限制链路带宽为500M的tcp打流测试，只需要在执行完**setup.py**后，执行`sudo python3 tcp_test.py -b 500`即可。
