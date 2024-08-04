@@ -8,7 +8,7 @@ An experiment with the same network topology as MininetLab but implemented using
 apt install docker.io
 apt install openvswitch-switch
 ```
-本实验所构建的网络拓扑图与https://github.com/zhaodangxue/mininetLab/blob/main/%E5%AE%9E%E9%AA%8C%E4%BB%8B%E7%BB%8D.pdf 中的spine-leaf框架网络拓扑图一致。
+本实验所构建的网络拓扑图与https://github.com/zhaodangxue/mininetLab/blob/main/%E5%AE%9E%E9%AA%8C%E4%BB%8B%E7%BB%8D.pdf 中的spine-leaf框架网络拓扑图一致。本实验的主要目的是为了与https://github.com/zhaodangxue/mininetLab 该Mininet搭建网络拓扑实验做一个docker容器搭建网络拓扑的对照，比较两者之间的性能，本实验同时也涉及到frr模拟路由软件BGP协议的一些配置。
 
 这个Lab的script下的脚本目录介绍：
 
